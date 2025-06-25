@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .toggle,
+      #check {
+        max-width: 500px;
+        height: 30px;
+        background-color: #1f1f1f;
+        color: #fff;
+        font-weight: 800;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 12px;
+        padding: 5px 20px;
+      }
+
+      .remove {
+        font-size: 20px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <div class="container">
+        <div class="toggle" id="clickable" onclick="clicked()">Click Me</div>
+      </div>
+
+      <br />
+      <div id="check">
+        <h2>ckeck out new features</h2>
+      </div>
+
+      <br />
+
+      <div>
+        <div id="removed">
+          <h2>Wants To Remove This Text</h2>
+        </div>
+      </div>
+      <button id="remove">REMOVE THIS</button>
+    </div>
+
+    <br />
+
+    <div>
+      <div id="inner">
+        <h2>
+          Checking <span style="display: none">#pooda</span> the Inner Text
+        </h2>
+      </div>
+    </div>
+
+    <script>
+      //
+
+      function clicked() {
+        const clicks = document.getElementById("clickable");
+        console.log(clicks.textContent);
+
+        if (clicks.textContent === "Click Me") {
+          clicks.textContent = "You clicked me !";
+          console.log(clicks.textContent);
+
+          clicks.style.backgroundColor = "yellow";
+          clicks.style.color = "black";
+        } else {
+          clicks.textContent = "Click Me";
+          console.log(clicks.textContent);
+          clicks.style.backgroundColor = "black";
+          clicks.style.color = "white";
+        }
+      }
+
+      //
+
+      document.getElementById("check").onclick = function () {
+        alert("Button Clicked !");
+      };
+
+      //
+
+      document.getElementById("remove").onclick = function () {
+        const click = document.getElementById("removed");
+        click.remove();
+      };
+
+      const a = true;
+      const b = 1;
+
+      if (a == b) {
+        console.log("true");
+      } else console.log("false");
+
+      if (a === b) {
+        console.log("true");
+      } else console.log("false");
+    </script>
+  </body>
+</html>

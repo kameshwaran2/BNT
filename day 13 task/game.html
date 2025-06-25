@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+<body>
+<script>
+      function truthyfalse() 
+      {
+        const valid = [
+          "false",
+          '"0"',
+          "",
+          undefined,
+          NaN,
+          true,
+          1,
+          "hello",
+          [],
+          "{}",
+          "0",
+          -1,
+        ];
+
+        const name = prompt("Enter Your name :");
+        const times = confirm("Gonna play 5 rounds");
+        alert("lets start");
+
+        const falsee = ["false", "0", "", "undefined", "NaN"];
+        const truthe = ["true", "1", "hello", "[]", "{}", "-1"];
+
+        let result = 0;
+        let i = 1;
+        while (i <= 5) 
+        {
+          const choose = prompt(`Round ${i}`);
+
+          if (truthe.includes(choose)) {
+            result++;
+          } else if (falsee.includes(choose)) {
+            result--;
+          } else {
+            alert("Not a Number");
+            i--;
+          }
+          i++;
+        }
+
+        alert(`${name} and your score out of 5 is ${result}`);
+        const playagain = confirm("wanna play again");
+        if (playagain) 
+        {
+          truthyfalse();
+        } else {
+          alert("thanks");
+          stop();
+        }
+      }
+      truthyfalse();
+</script>
+</body>
+</html>

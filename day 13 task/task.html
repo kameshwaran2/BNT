@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Day 13 TAsks
+      console.log(typeof 2); // number
+      console.log(typeof "HELLO"); // string
+      console.log(typeof false); // boolean
+      console.log(typeof []); // object
+      console.log(typeof null); // nan
+      console.log(typeof a); // undefined
+
+      console.log("1" + 5); // 15
+      console.log(1 + 5); // 6
+
+      let change = Number("15"); // 15
+      console.log(change + 10); // 25
+
+      let b = [1, 2, 3, 4, 1];
+      console.log(b.indexOf(3)); // 4
+      console.log(b.lastIndexOf(1)); // 4
+
+      let c = "HEllo";
+      console.log(c.charAt(0)); // H
+
+      let d = 10;
+      console.log(d.toString()); // "10"
+
+      console.log((123.123457).toFixed(2)); // 123.12
+      console.log(Math.round(12.8)); // 13
+
+      console.log(Number("Hello")); // NaN
+      console.log(Number(12)); // 12
+
+      console.log("HEllo world".split("")); // ['H', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+
+      console.log(Number.isInteger("hllo")); // false
+      console.log(Number.isInteger(19)); // true
+      console.log(Number.parseInt("fg1223sdfsd.23891")); // NaN
+      console.log(Number.parseInt("1223sdfsd.23891")); // 1223
+      console.log(Number.parseFloat("1223.23sdkds")); // 1223.23
+
+      let arr = [1, 2, 3, 4, 5];
+      console.log(arr.reverse()); // [5, 4, 3, 2, 1]
+      console.log(arr.push(10), arr); // [1, 2, 3, 4, 5, 10]
+      console.log(arr.pop(), arr); // [1, 2, 3, 4, 5]
+      console.log(arr.unshift(10), arr); // [10, 1, 2, 3, 4, 5]
+      console.log(arr.shift(), arr); // [1, 2, 3, 4, 5]
+
+      console.log(arr.splice(0, 3), "Remaining arr ", arr); // [1,2,3] [4, 5]
+
+      console.log(
+        arr.splice(0, 2, 1, 2, 3, 4, 5),
+        "Delete and create new ",
+        arr
+      ); // [1, 2] Delete and create new [1, 2, 3, 4, 5, 3, 4, 5]
+
+      const obj = {
+        numbers: [1, 2, 3, 4, 5],
+        value: function () {
+          console.log(`My role no is ${this.numbers[3]}`); // my role number is 4
+        },
+      };
+      obj.value();
+
+      let g = [0, 1];
+      const gen = Math.floor(Math.random() * 3);
+      switch (g[gen]) {
+        case 0:
+          console.log(g[gen], " This is case 1");
+          break;
+        case 1:
+          console.log(g[gen], " This is case 2");
+          break;
+        default:
+          console.log(g[gen], " This is default");
+      }
+    </script>
+  </body>
+</html>
